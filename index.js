@@ -1,8 +1,8 @@
-const app = require('./app')
+const { server } = require('./app')
 require('dotenv').config()
 
 const PORT = process.env.PORT || 1007
-const server = app.listen(PORT, () => {
+const serverer = server.listen(PORT, () => {
     console.log(`Server Running here 👉 https://localhost:${PORT}`);
 })
 
@@ -12,7 +12,7 @@ process.on('uncaughtException', error => {
 
 process.on('beforeExit', code => {
     try {
-        server.close()
+        serverer.close()
     } catch (error) {
         console.log(error)
     }

@@ -41,6 +41,10 @@ build/Release
 node_modules/
 jspm_packages/
 
+src/helpers/lnmacaroon.txt
+
+src/helpers/lntlspath.txt
+
 # TypeScript v1 declaration files
 typings/
 

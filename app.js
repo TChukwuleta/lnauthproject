@@ -8,7 +8,7 @@ const http = require('http')
 const app = express()
 const server = http.createServer(app)
 
-app.use(cors())
+app.use(cors()) 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
@@ -30,7 +30,7 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log("User disconnected")
     })
-
+    console.log(socket)
     emitSocketEvent = socket
 })
 

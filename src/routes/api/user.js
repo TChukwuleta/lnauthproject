@@ -1,7 +1,7 @@
 const { pseudoLogin, lnurllogin } = require("../../controllers/user")
 const router = require('express').Router()
 
-router.get('/login-lnrul', lnurllogin)
-router.get('/lnrul', pseudoLogin)
+router.get('/login-lnurl', lnurllogin)
+router.get('/lnurl', pseudoLogin)
 
 module.exports = router
